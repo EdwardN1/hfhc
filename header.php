@@ -40,6 +40,7 @@
 			
 			<!-- Load off-canvas container. Feel free to remove if not using. -->			
 			<?php get_template_part( 'parts/content', 'offcanvas' ); ?>
+			<?php get_template_part( 'parts/content', 'offcanvas-right' ); ?>
 			
 			<div class="off-canvas-content" data-off-canvas-content>
 				

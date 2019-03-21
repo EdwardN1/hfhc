@@ -3,7 +3,8 @@
 register_nav_menus(
 	array(
 		'main-nav'		=> __( 'The Main Menu', 'jointswp' ),		// Main nav in header
-		'offcanvas-nav'	=> __( 'The Off-Canvas Menu', 'jointswp' ),	// Off-Canvas nav
+		'offcanvas-nav'	=> __( 'The Left Off-Canvas Menu', 'jointswp' ),	// Off-Canvas nav
+		'offcanvas-nav-right'	=> __( 'The Right Off-Canvas Menu', 'jointswp' ),	// Off-Canvas nav
 		'footer-links'	=> __( 'Footer Links', 'jointswp' )			// Secondary nav in footer
 	)
 );
@@ -44,10 +45,65 @@ function joints_off_canvas_nav() {
 	));
 }
 
+// The Right Off Canvas Menu
+function joints_right_off_canvas_nav() {
+	wp_nav_menu(array(
+		'container'			=> false,							// Remove nav container
+		'menu_id'			=> 'offcanvas-nav-nav',					// Adding custom nav id
+		'menu_class'		=> 'vertical menu accordion-menu',	// Adding custom nav class
+		'items_wrap'		=> '<ul id="%1$s" class="%2$s" data-accordion-menu>%3$s</ul>',
+		'theme_location'	=> 'offcanvas-nav-right',					// Where it's located in the theme
+		'depth'				=> 5,								// Limit the depth of the nav
+		'fallback_cb'		=> false,							// Fallback function (see below)
+		'walker'			=> new Off_Canvas_Menu_Walker()
+	));
+}
+
 class Off_Canvas_Menu_Walker extends Walker_Nav_Menu {
 	function start_lvl(&$output, $depth = 0, $args = Array() ) {
 		$indent = str_repeat("\t", $depth);
 		$output .= "\n$indent<ul class=\"vertical menu\">\n";
+	}
+	function start_el(&$output, $item, $depth=0, $args=array(), $id = 0) {
+		$object = $item->object;
+		$type = $item->type;
+		$title = $item->title;
+		$description = $item->description;
+		$permalink = $item->url;
+		$output .= "<li class='" .  implode(" ", $item->classes) . "'>";
+
+		//Add SPAN if no Permalink
+		if( $permalink && $permalink != '#' ) {
+			$output .= '<a href="' . $permalink . '">';
+		} else {
+			$output .= '<span>';
+		}
+
+		$output .= $title;
+
+		$imgWrapStart = '';
+		$imgWrapEnd = '';
+
+		if( $permalink && $permalink != '#' ) {
+			$output .= '</a>';
+			$imgWrapStart = '<a href="'.$permalink.'">';
+			$imgWrapEnd = '</a>';
+		} else {
+			$output .= '</span>';
+		}
+
+		$pageID = get_post_meta( $item->ID, '_menu_item_object_id', true );
+		$thumb = get_the_post_thumbnail( $pageID, 'thumbnail');
+		if($thumb == '') {
+			$thumb='<img src="https://via.placeholder.com/150" style="border-radius: 50%;">';
+		}
+		$output .= '<div class="grid-x grid-padding-x">';
+		$output .= '<div class="cell shrink">'.$imgWrapStart.$thumb.$imgWrapEnd.'</div>';
+		if( $description != '' && $depth == 0 ) {
+			$output .= '<div class="cell auto">' . $description . '</div>';
+		}
+
+		$output .= '</div>';
 	}
 }
 

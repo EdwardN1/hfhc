@@ -6,12 +6,12 @@
  */
 ?>
 
-<div class="off-canvas position-left" id="off-canvas" data-off-canvas>
+<div class="off-canvas position-right" id="off-canvas-right" data-off-canvas>
     <div>
-        <a data-toggle="off-canvas" class="fi-arrow-right large"><<< Close</a>
+        <a data-toggle="off-canvas-right" class="fi-arrow-right large">Close >>></a>
     </div>
-    <h3><a href="/services/">Services</a></h3>
-	<?php joints_off_canvas_nav(); ?>
+    <h3><a href="/jobs/">Jobs at HFHC</a></h3>
+	<?php joints_right_off_canvas_nav(); ?>
 
 	<?php if ( is_active_sidebar( 'offcanvas' ) ) : ?>
 

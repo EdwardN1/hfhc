@@ -11,6 +11,7 @@ $breakpoint = "medium"; ?>
 	<div class="top-bar-left show-for-<?php echo $breakpoint ?>">
 		<ul class="menu">
 			<li><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></li>
+            <li><button class="menu-icon" type="button" data-toggle="off-canvas-left"></button></li>
 		</ul>
 	</div>
 	<div class="top-bar-right">

@@ -1,0 +1,246 @@
+//** ========================Padding========================== **//
+@for $i from 1 through 600 {
+  .pad-left-#{$i} {
+    padding-left: #{$i}px;
+  }
+}
+@for $i from 1 through 600 {
+  .pad-right-#{$i} {
+    padding-right: #{$i}px;
+  }
+}
+@for $i from 1 through 600 {
+  .pad-top-#{$i} {
+    padding-top: #{$i}px;
+  }
+}
+@for $i from 1 through 600 {
+  .pad-bottom-#{$i} {
+    padding-bottom: #{$i}px;
+  }
+}
+//** ========================Font Sizes========================== **//
+@for $i from 1 through 200 {
+  .fontsize-#{$i} {
+    font-size: #{$i}px;
+    &.addtolinks {
+      a {
+        font-size: #{$i}px;
+      }
+    }
+  }
+}
+
+@for $i from 1 through 200 {
+  .fontsize-small-#{$i} {
+    @include breakpoint(small) {
+      font-size: #{$i}px;
+      &.addtolinks {
+        a {
+          font-size: #{$i}px;
+        }
+      }
+    }
+  }
+}
+
+@for $i from 1 through 200 {
+  .fontsize-medium-#{$i} {
+    @include breakpoint(medium) {
+      font-size: #{$i}px;
+      &.addtolinks {
+        a {
+          font-size: #{$i}px;
+        }
+      }
+    }
+  }
+}
+
+@for $i from 1 through 200 {
+  .fontsize-large-#{$i} {
+    @include breakpoint(large) {
+      font-size: #{$i}px;
+      &.addtolinks {
+        a {
+          font-size: #{$i}px;
+        }
+      }
+    }
+  }
+}
+
+@for $i from 1 through 200 {
+  .fontsize-xlarge-#{$i} {
+    @include breakpoint(xlarge) {
+      font-size: #{$i}px;
+      &.addtolinks {
+        a {
+          font-size: #{$i}px;
+        }
+      }
+    }
+  }
+}
+
+@for $i from 1 through 200 {
+  .fontsize-xxlarge-#{$i} {
+    @include breakpoint(xxlarge) {
+      font-size: #{$i}px;
+      &.addtolinks {
+        a {
+          font-size: #{$i}px;
+        }
+      }
+    }
+  }
+}
+
+//** ========================Line Heights========================== **//
+
+@for $i from 1 through 9 {
+  .lineheight-0#{$i} {
+    line-height: ($i)/10;
+  }
+  .lineheight-1#{$i} {
+    line-height: 1 + ($i)/10;
+  }
+  .lineheight-2#{$i} {
+    line-height: 2 + ($i)/10;
+  }
+}
+
+.lineheight-1 {
+  line-height: 1;
+}
+
+.lineheight-2 {
+  line-height: 2;
+}
+
+.lineheight-3 {
+  line-height: 3;
+}
+
+//** ========================Font Transforms========================== **//
+.caps {
+  text-transform: uppercase;
+}
+
+//** ========================Font Weights========================== **//
+.light {
+  font-weight: $font-light;
+}
+.regular {
+  font-weight: $font-regular;
+}
+.semi-bold {
+  font-weight: $font-semi-bold;
+}
+.bold {
+  font-weight: $font-bold;
+}
+.weight-black {
+  font-weight: $font-black;
+}
+
+//** ========================Font Colors========================== **//
+.light-grey {
+  color: $light-gray;
+}
+
+.medium-grey {
+  color: $medium-gray;
+}
+
+.dark-grey {
+  color: $dark-gray;
+}
+
+.black {
+  color: $black;
+}
+
+.body-colour {
+  color: $body-colour;
+}
+
+.white {
+  color: $white;
+}
+
+.blue {
+  color: $blue;
+}
+
+.red {
+  color: $red;
+}
+
+.green {
+  color: $green;
+}
+
+.light-green {
+  color: $light-green;
+}
+
+//** ========================Background Colors========================== **//
+.light-grey-background {
+  background-color: $light-gray;
+}
+
+.medium-grey-background {
+  background-color: $medium-gray;
+}
+
+.dark-grey-background {
+  background-color: $dark-gray;
+}
+
+.black-background {
+  background-color: $black;
+}
+
+.body-colour-background {
+  background-color: $body-colour;
+}
+
+.white-background {
+  background-color: $white;
+}
+
+.blue-background {
+  background-color: $blue;
+}
+
+.red-background {
+  background-color: $red;
+}
+
+.green-background {
+  background-color: $green;
+}
+
+.light-green-background {
+  background-color: $light-green;
+}
+
+//** ========================Icons========================== **//
+
+.telephone {
+  padding-left: 60px;
+  position: relative;
+  &:before {
+    content: " ";
+    width: 44px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background-image: url("../images/phone.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+}

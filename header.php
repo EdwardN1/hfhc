@@ -9,45 +9,111 @@
 
 <!doctype html>
 
-  <html class="no-js"  <?php language_attributes(); ?>>
+<html class="no-js" <?php language_attributes(); ?>>
 
-	<head>
-		<meta charset="utf-8">
-		
-		<!-- Force IE to use the latest rendering engine available -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<head>
+    <meta charset="utf-8">
 
-		<!-- Mobile Meta -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta class="foundation-mq">
-		
-		<!-- If Site Icon isn't set in customizer -->
-		<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
-			<!-- Icons & Favicons -->
-			<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
-			<link href="<?php echo get_template_directory_uri(); ?>/assets/images/apple-icon-touch.png" rel="apple-touch-icon" />	
-	    <?php } ?>
+    <!-- Force IE to use the latest rendering engine available -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta class="foundation-mq">
 
-		<?php wp_head(); ?>
+    <!-- If Site Icon isn't set in customizer -->
+    <?php if (!function_exists('has_site_icon') || !has_site_icon()) { ?>
+        <!-- Icons & Favicons -->
+        <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
+        <link href="<?php echo get_template_directory_uri(); ?>/assets/images/apple-icon-touch.png"
+              rel="apple-touch-icon"/>
+    <?php } ?>
 
-	</head>
-			
-	<body <?php body_class(); ?>>
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-		<div class="off-canvas-wrapper">
-			
-			<!-- Load off-canvas container. Feel free to remove if not using. -->			
-			<?php get_template_part( 'parts/content', 'offcanvas' ); ?>
-			<?php get_template_part( 'parts/content', 'offcanvas-right' ); ?>
-			
-			<div class="off-canvas-content" data-off-canvas-content>
-				
-				<header class="header" role="banner">
-							
-					 <!-- This navs will be applied to the topbar, above all content 
-						  To see additional nav styles, visit the /parts directory -->
-					 <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
-	 	
-				</header> <!-- end .header -->
+    <?php wp_head(); ?>
+
+</head>
+
+<body <?php body_class(); ?>>
+
+<div class="off-canvas-wrapper">
+
+    <!-- Load off-canvas container. Feel free to remove if not using. -->
+    <?php /*get_template_part( 'parts/content', 'offcanvas' ); */ ?><!--
+			--><?php /*get_template_part( 'parts/content', 'offcanvas-right' ); */ ?>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+
+        <header class="header" role="banner">
+
+            <div class="blue-background white pad-top-30 pad-bottom-30">
+                <div class="grid-container">
+                    <div class="grid-x">
+                        <div class="cell large-9">
+                            <div class="grid-x">
+                                <div class="telephone cell large-4">
+                                    <div class="fontsize-18 lineheight-11">Home Care Enquires</div>
+                                    <div class="semi-bold fontsize-25 lineheight-13">0800 123 456</div>
+                                </div>
+                                <div class="telephone cell large-4">
+                                    <div class="fontsize-18 lineheight-11">Looking for Staff?</div>
+                                    <div class="semi-bold fontsize-25 lineheight-13">0800 789 000</div>
+                                </div>
+                                <div class="telephone cell large-4">
+                                    <div class="fontsize-18 lineheight-11">Want to Work for Us?</div>
+                                    <div class="semi-bold fontsize-25 lineheight-13">0800 123 456</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell large-3">
+                            <div class="grid-x">
+                                <div class="cell auto"></div>
+                                <div class="shrink cell pad-right-10">
+                                    <div class="text-center"><img
+                                                src="<?php echo get_template_directory_uri(); ?>/assets/images/Request-a-Call-Icon.png">
+                                    </div>
+                                    <div class="fontsize-17">Request a call</div>
+                                </div>
+                                <div class="shrink cell pad-right-10 pad-left-10">
+                                    <div class="text-center"><img
+                                                src="<?php echo get_template_directory_uri(); ?>/assets/images/Vacancies-Icon.png">
+                                    </div>
+                                    <div class="fontsize-17">Vacancies</div>
+                                </div>
+                                <div class="shrink cell pad-left-10">
+                                    <div class="text-center"><img
+                                                src="<?php echo get_template_directory_uri(); ?>/assets/images/Blog-Icon.png">
+                                    </div>
+                                    <div class="fontsize-17">Blog</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="searchbar" class="grid-container">
+                <div class="grid-x">
+                    <div class="large-8 cell pad-top-15 pad-bottom-15">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png">
+                    </div>
+                    <div class="cell auto"></div>
+                    <div class="cell shrink">
+
+                        <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+                                <input type="search" class="header-search-field" placeholder="<?php echo esc_attr_x( 'Search...', 'jointswp' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'jointswp' ) ?>" />
+
+                            <input type="submit" class="header-search-submit button" value="" />
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="main-nav">
+                <!-- This navs will be applied to the topbar, above all content
+                     To see additional nav styles, visit the /parts directory -->
+                <?php get_template_part('parts/nav', 'offcanvas-topbar'); ?>
+            </div>
+        </header> <!-- end .header -->

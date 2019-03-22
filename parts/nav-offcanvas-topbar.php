@@ -8,13 +8,13 @@
 <div style="background-color: #e6e6e6;">
     <div class="grid-container">
         <div class="top-bar" id="top-bar-menu">
-            <div class="top-bar-left float-left">
+           <!-- <div class="top-bar-left float-left">
                 <ul class="menu">
-                    <li><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></li>
+                    <li><a href="<?php /*echo home_url(); */?>"><?php /*bloginfo( 'name' ); */?></a></li>
                     <li><a data-toggle="off-canvas">Services</a></li>
                     <li><a data-toggle="off-canvas-right">Jobs</a></li>
                 </ul>
-            </div>
+            </div>-->
             <div class="top-bar-right show-for-medium">
 				<?php joints_top_nav(); ?>
             </div>

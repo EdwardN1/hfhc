@@ -50,3 +50,26 @@ function acfgbc_StandardContent_rc( $block, $content = '', $is_preview = false )
 	}
 	include get_template_directory(). '/parts/blocks/StandardContent.php';
 }
+add_action( 'acf/init', 'acfgbc_HeroSections' );
+function acfgbc_HeroSections() {
+	if ( ! function_exists( 'acf_register_block' ) ) {
+		return;
+	}
+	acf_register_block( array(
+		'name'            => 'acfgbcHeroSections',
+		'title'           => __( 'Hero Sections' ),
+		'description'     => __( 'Hero Sections' ),
+		'render_callback' => 'acfgbc_HeroSections_rc',
+		'category'        => 'hfhcblocks',
+		'icon'            => 'tagcloud',
+		'mode'            => 'preview',
+		'supports'        => array( 'align' => false, 'multiple' => true, ),
+		'keywords'        => array( 'Row', 'Common' ),
+	) );
+}
+function acfgbc_HeroSections_rc( $block, $content = '', $is_preview = false ) {
+	if ($is_preview) {
+		include_once get_template_directory().'/parts/blocks/editor/styles.php';
+	}
+	include get_template_directory(). '/parts/blocks/HeroSections.php';
+}

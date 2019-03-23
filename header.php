@@ -99,13 +99,17 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png">
                     </div>
                     <div class="cell auto"></div>
-                    <div class="cell shrink">
+                    <div class="cell shrink pad-top-48">
 
-                        <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+                        <form role="search" method="get" class="search-form inline-block" action="<?php echo home_url( '/' ); ?>">
                                 <input type="search" class="header-search-field" placeholder="<?php echo esc_attr_x( 'Search...', 'jointswp' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'jointswp' ) ?>" />
 
                             <input type="submit" class="header-search-submit button" value="" />
                         </form>
+
+                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook-icon.png"></a>
+                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin-icon.png"></a>
+                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-icon.png"></a>
 
                     </div>
                 </div>

@@ -1,0 +1,54 @@
+ul.menu {
+  color: $body-colour;
+  font-family: $body-font-family;
+
+  a {
+    color: $body-colour;
+    font-size: 22px;
+  }
+
+  .active > a {
+    background: none;
+    color: $body-colour;
+  }
+
+  .is-dropdown-submenu {
+    list-style: none;
+    min-width: 300px;
+    a {
+      font-size: 18px;
+    }
+  }
+
+  &.dropdown.medium-horizontal {
+    > li.is-dropdown-submenu-parent > a {
+      &:after {
+        border: none;
+      }
+    }
+  }
+
+  > li {
+    > a {
+      display: inline-block;
+    }
+    &:after {
+      content: "|";
+      display: inline-block;
+      font-size: 22px;
+      line-height: 1;
+    }
+    &:last-child {
+      &:after {
+        content: "";
+      }
+    }
+  }
+}
+
+/*
+ul#main-nav >li:last-child {
+    &:after {
+      content: "";
+    }
+}*/

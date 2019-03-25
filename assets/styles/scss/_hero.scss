@@ -1,0 +1,90 @@
+.hero-top {
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 416px;
+  height:33vw;
+  font-size: 26px;
+  line-height: 1.4;
+  p {
+    font-size: 26px;
+    line-height: 1.4;
+  }
+}
+
+.slick-button {
+  border: 1px solid $white;
+  display: block;
+  width: 407px;
+  height: 135px;
+  font-weight: $font-semi-bold;
+  font-size: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-right: 2em;
+  padding-left: 2em;
+  padding-top: 0.3em;
+  line-height: 1;
+  position: relative;
+  margin-top: -0.5em;
+  &:hover {
+    color: $white;
+  }
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 135px;
+    width: 70px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    content: " ";
+  }
+  &.Red {
+    background-color: $red;
+    &:after {
+      background-image: url("../images/Red-Button.png");
+    }
+  }
+  &.Green {
+    background-color: $green;
+    &:after {
+      background-image: url("../images/Green-Button.png");
+    }
+  }
+  &.Blue {
+    background-color: $blue;
+    &:after {
+      background-image: url("../images/Blue-Button.png");
+    }
+  }
+  color: $white;
+}
+.hero-footer {
+  min-height: 160px;
+  .hero-footer-content {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 24px;
+    line-height: 1.3;
+    p {
+      font-size: 24px;
+      line-height: 1.3;
+    }
+  }
+}
+.white-overlay {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+68&1+47,0+68 */
+  background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(255,255,255,0) 68%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 47%,rgba(255,255,255,0) 68%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 47%,rgba(255,255,255,0) 68%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+  max-height: 416px;
+  height:33vw;
+  padding-top: 18px;
+}

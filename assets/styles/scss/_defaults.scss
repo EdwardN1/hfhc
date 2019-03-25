@@ -19,6 +19,13 @@
     padding-bottom: #{$i}px;
   }
 }
+//** ========================H Tags========================== **//
+h1, h2 {
+  font-size: 48px;
+  font-weight: $font-semi-bold;
+  line-height: 1.2;
+}
+
 //** ========================Font Sizes========================== **//
 @for $i from 1 through 200 {
   .fontsize-#{$i} {
@@ -253,4 +260,30 @@
 
 .block {
   display: block;
+}
+
+//** ========================Links & buttons========================== **//
+
+.arrow-button {
+  color: $body-font-color;
+  line-height: 1.5;
+  font-weight: $font-semi-bold;
+  position: relative;
+  padding-right: 65px;
+  &:hover {
+    color: $body-font-color;
+  }
+  &:after {
+    width: 50px;
+    height: 1.5em;
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url("../images/Blue-Button.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+
 }

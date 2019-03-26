@@ -73,3 +73,28 @@ function acfgbc_HeroSections_rc( $block, $content = '', $is_preview = false ) {
 	}
 	include get_template_directory(). '/parts/blocks/HeroSections.php';
 }
+
+add_action( 'acf/init', 'acfgbc_CarouselSection' );
+function acfgbc_CarouselSection() {
+    if ( ! function_exists( 'acf_register_block' ) ) {
+        return;
+    }
+    acf_register_block( array(
+        'name'            => 'acfgbcCarouselSection',
+        'title'           => __( 'Carousel Section' ),
+        'description'     => __( 'Carousel Section' ),
+        'render_callback' => 'acfgbc_CarouselSection_rc',
+        'category'        => 'hfhcblocks',
+        'icon'            => 'tagcloud',
+        'mode'            => 'preview',
+        'supports'        => array( 'align' => false, 'multiple' => true, ),
+        'keywords'        => array( 'Row', 'Common' ),
+    ) );
+}
+function acfgbc_CarouselSection_rc( $block, $content = '', $is_preview = false )
+{
+    if ($is_preview) {
+        include_once get_template_directory() . '/parts/blocks/editor/styles.php';
+    }
+    include get_template_directory() . '/parts/blocks/CarouselSection.php';
+}

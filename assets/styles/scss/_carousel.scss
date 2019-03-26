@@ -1,0 +1,22 @@
+.carousel-section {
+  .image {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .blue-overlay {
+    min-height: 260px;
+  }
+  .slick-slide {
+    margin: 0 22px;
+  }
+  /* the parent */
+  .slick-list {
+    margin: 0 -22px;
+  }
+  a:focus {
+    outline: none;
+  }
+  .header {
+    padding: 1em;
+  }
+}

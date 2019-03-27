@@ -1,22 +1,49 @@
 .carousel-section {
+
   .image {
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    min-height: 260px;
   }
   .blue-overlay {
-    min-height: 260px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
   }
   .slick-slide {
     margin: 0 22px;
   }
-  /* the parent */
   .slick-list {
     margin: 0 -22px;
   }
-  a:focus {
-    outline: none;
+  > a {
+    &:focus {
+      outline: none;
+    }
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    display: block;
+    opacity: 0;
   }
   .header {
     padding: 1em;
   }
+  .slide {
+    .blue-overlay {
+      background-color: transparent;
+    }
+    &:hover {
+      .blue-overlay {
+        background-color: rgba(63,194,223,0.5);
+      }
+    }
+  }
+
 }

@@ -16,13 +16,12 @@
                     <?php $heading = get_sub_field('heading'); ?>
                     <?php $description = get_sub_field('description'); ?>
                     <?php $link = get_sub_field('link'); ?>
-                    <div class="image" style="background-image: url(<?php echo $imageURL; ?>)">
-                        <div class="blue-overlay text-center">
-                            <a href="<?php echo $link; ?>">
-                                <div class="fontsize-28 white lineheight-12 pad-bottom-30 pad-top-70"><?php echo $heading; ?></div>
-                                <div class="fontsize-24 white lineheight-12"><?php echo $description; ?></div>
-                            </a>
-                        </div>
+                    <div class="image text-center" style="background-image: url(<?php echo $imageURL; ?>)">
+                        <div class="blue-overlay"></div>
+                        <a class="slide-link" href="<?php echo $link; ?>">
+                            <div class="fontsize-28 white lineheight-12 pad-bottom-30 pad-top-70"><?php echo $heading; ?></div>
+                            <div class="fontsize-24 white lineheight-12"><?php echo $description; ?></div>
+                        </a>
                     </div>
                     <div class="title fontsize-26 semi-bold text-center">
                         <?php echo $heading; ?>

@@ -7,7 +7,7 @@
     </div>
     <?php if (have_rows('slides')) : ?>
         <div class="carousel-slider" data-slick-slider
-             data-slick='{"slidesToShow":5, "slidesToScroll":1, "infinite":true, "responsive": [{"breakpoint": 915,"settings": {"slidesToShow": 3, "slidesToScroll": 1}}, {"breakpoint": 550, "settings": {"slidesToShow": 1, "slidesToScroll": 1}}]}'>
+             data-slick='{"dots": true, "slidesToShow":5, "slidesToScroll":1, "infinite":true, "responsive": [{"breakpoint": 915,"settings": {"slidesToShow": 3, "slidesToScroll": 1}}, {"breakpoint": 550, "settings": {"slidesToShow": 1, "slidesToScroll": 1}}]}'>
             <?php while (have_rows('slides')) : the_row(); ?>
                 <div class="slide">
                     <?php $image = get_sub_field('image'); ?>
@@ -16,15 +16,14 @@
                     <?php $heading = get_sub_field('heading'); ?>
                     <?php $description = get_sub_field('description'); ?>
                     <?php $link = get_sub_field('link'); ?>
-                    <div class="image text-center" style="background-image: url(<?php echo $imageURL; ?>)">
-                        <div class="blue-overlay"></div>
+                    <div class="image text-center" style="background: url(<?php echo $imageURL; ?>)">
                         <a class="slide-link" href="<?php echo $link; ?>">
                             <div class="fontsize-28 white lineheight-12 pad-bottom-30 pad-top-70"><?php echo $heading; ?></div>
                             <div class="fontsize-24 white lineheight-12"><?php echo $description; ?></div>
                         </a>
                     </div>
                     <div class="title fontsize-26 semi-bold text-center">
-                        <?php echo $heading; ?>
+                        <a href="<?php echo $link; ?>"><?php echo $heading; ?></a>
                     </div>
 
 

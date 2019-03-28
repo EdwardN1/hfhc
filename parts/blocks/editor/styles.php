@@ -20,4 +20,8 @@ echo '<link rel="stylesheet" type="text/css" href="'.get_template_directory_uri(
         }
     }
 
+    .grid-container {
+        max-width: 1260px;
+    }
+
 </style>

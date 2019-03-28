@@ -1,49 +1,127 @@
 .carousel-section {
-
+  padding-bottom: 2rem;
   .image {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     min-height: 260px;
   }
+
   .blue-overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom:0;
+    bottom: 0;
   }
+
   .slick-slide {
     margin: 0 22px;
   }
+
   .slick-list {
     margin: 0 -22px;
+    padding-bottom: 1em;
   }
-  > a {
-    &:focus {
-      outline: none;
-    }
 
+  .slide-link {
+    background-color: rgba(63, 194, 223, 0.8);
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom:0;
+    bottom: 0;
     display: block;
     opacity: 0;
-  }
-  .header {
-    padding: 1em;
-  }
-  .slide {
-    .blue-overlay {
-      background-color: transparent;
+    transition: opacity .6s;
+    &:focus {
+      outline: none;
     }
+  }
+
+  .slide {
     &:hover {
-      .blue-overlay {
-        background-color: rgba(63,194,223,0.5);
+      .slide-link {
+        opacity: 1;
+      }
+    }
+    .title {
+      line-height: 1.2;
+      padding: 1em;
+      a {
+        color: $body-colour;
+        &:hover {
+          color: $body-colour;
+        }
       }
     }
   }
+
+  .header {
+    padding: 2em;
+  }
+
+  .slick-next {
+    top: 35%;
+    transform: translateY(-35%);
+    width: 33px;
+    height: 33px;
+    right: -50px;
+
+    &:before {
+      background-image: url("../images/Blue-Button-Right.png");
+      display: block;
+      width: 33px;
+      height: 33px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: " ";
+    }
+  }
+
+  .slick-prev {
+    top: 35%;
+    transform: translateY(-35%);
+    width: 33px;
+    height: 33px;
+    left: -50px;
+
+    &:before {
+      background-image: url("../images/Blue-Button-Left.png");
+      display: block;
+      width: 33px;
+      height: 33px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: " ";
+    }
+  }
+
+  .slick-dots {
+    li {
+      button {
+        height: 21px;
+        width: 21px;
+
+        &:before {
+          content: " ";
+          height: 21px;
+          width: 21px;
+          background-image: url("../images/dot.png");
+          background-size: contain;
+          opacity: 1;
+        }
+      }
+
+      &.slick-active {
+        button {
+          &:before {
+            background-image: url("../images/dot-active.png");
+          }
+        }
+      }
+    }
+  }
+
 
 }

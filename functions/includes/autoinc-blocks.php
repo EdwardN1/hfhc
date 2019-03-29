@@ -98,3 +98,51 @@ function acfgbc_CarouselSection_rc( $block, $content = '', $is_preview = false )
     }
     include get_template_directory() . '/parts/blocks/CarouselSection.php';
 }
+
+add_action( 'acf/init', 'acfgbc_FeaturedArticlesSection' );
+function acfgbc_FeaturedArticlesSection() {
+    if ( ! function_exists( 'acf_register_block' ) ) {
+        return;
+    }
+    acf_register_block( array(
+        'name'            => 'acfgbcFeaturedArticlesSection',
+        'title'           => __( 'Featured Articles Section' ),
+        'description'     => __( 'Featured Articles Section' ),
+        'render_callback' => 'acfgbc_FeaturedArticlesSection_rc',
+        'category'        => 'hfhcblocks',
+        'icon'            => 'tagcloud',
+        'mode'            => 'preview',
+        'supports'        => array( 'align' => false, 'multiple' => true, ),
+        'keywords'        => array( 'Row', 'Common' ),
+    ) );
+}
+function acfgbc_FeaturedArticlesSection_rc( $block, $content = '', $is_preview = false ) {
+    if ($is_preview) {
+        include_once get_template_directory().'/parts/blocks/editor/styles.php';
+    }
+    include get_template_directory(). '/parts/blocks/FeaturedArticlesSection.php';
+}
+
+add_action( 'acf/init', 'acfgbc_HeaderStyleImageSection' );
+function acfgbc_HeaderStyleImageSection() {
+    if ( ! function_exists( 'acf_register_block' ) ) {
+        return;
+    }
+    acf_register_block( array(
+        'name'            => 'acfgbcHeaderStyleImageSection',
+        'title'           => __( 'Header Style Image Section' ),
+        'description'     => __( 'Header Style Image Section' ),
+        'render_callback' => 'acfgbc_HeaderStyleImageSection_rc',
+        'category'        => 'hfhcblocks',
+        'icon'            => 'tagcloud',
+        'mode'            => 'preview',
+        'supports'        => array( 'align' => false, 'multiple' => true, ),
+        'keywords'        => array( 'Row', 'Common' ),
+    ) );
+}
+function acfgbc_HeaderStyleImageSection_rc( $block, $content = '', $is_preview = false ) {
+    if ($is_preview) {
+        include_once get_template_directory().'/parts/blocks/editor/styles.php';
+    }
+    include get_template_directory(). '/parts/blocks/HeaderStyleImageSection.php';
+}

@@ -66,8 +66,19 @@
 				<?php
 				$button_colour  = get_sub_field( 'button_colour' );
 				$button_text    = get_sub_field( 'button_text' );
+				$button_icon = get_sub_field('button_icon');
 				$slickNavigator .= '<div class="large-4">';
-				$slickNavigator .= '<a class="slick-button ' . $button_colour . '" data-slide="' . $slideCount . '" data-slider-id="' . $sliderID . '">' . $button_text . '</a>';
+				$buttonHTML = '<a class="slick-button ' . $button_colour . '" data-slide="' . $slideCount . '" data-slider-id="' . $sliderID . '">' . $button_text . '</a>';
+				if($button_icon=='People') {
+                    $buttonHTML = '<a class="slick-button people ' . $button_colour . '" data-slide="' . $slideCount . '" data-slider-id="' . $sliderID . '">' . $button_text . '</a>';
+                }
+                if($button_icon=='Hands') {
+                    $buttonHTML = '<a class="slick-button hands ' . $button_colour . '" data-slide="' . $slideCount . '" data-slider-id="' . $sliderID . '">' . $button_text . '</a>';
+                }
+                if($button_icon=='Medic') {
+                    $buttonHTML = '<a class="slick-button medic ' . $button_colour . '" data-slide="' . $slideCount . '" data-slider-id="' . $sliderID . '">' . $button_text . '</a>';
+                }
+				$slickNavigator .= $buttonHTML;
 				$slideCount ++;
 				$slickNavigator .= '</div>';
 				?>

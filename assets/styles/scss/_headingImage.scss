@@ -1,0 +1,25 @@
+.heading-image {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right center;
+  //max-height: 416px;
+  height: 30vw;
+  font-size: 26px;
+  line-height: 1.4;
+
+  p {
+    font-size: 26px;
+    line-height: 1.4;
+  }
+
+  .white-overlay {
+    height: 40vw;
+  }
+
+  h1, h2 {
+    font-size: 80px;
+    padding-top: 40px;
+    line-height: 1;
+    padding-bottom: 30px;
+  }
+}

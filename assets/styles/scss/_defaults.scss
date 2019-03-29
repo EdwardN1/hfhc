@@ -108,25 +108,43 @@ h1, h2 {
 @for $i from 1 through 9 {
   .lineheight-0#{$i} {
     line-height: ($i)/10;
+    p {
+      line-height: ($i)/10;
+    }
   }
   .lineheight-1#{$i} {
     line-height: 1 + ($i)/10;
+    p {
+      line-height: 1 + ($i)/10;
+    }
   }
   .lineheight-2#{$i} {
     line-height: 2 + ($i)/10;
+    p {
+      line-height: 2 + ($i)/10;
+    }
   }
 }
 
 .lineheight-1 {
   line-height: 1;
+  p {
+    line-height: 1;
+  }
 }
 
 .lineheight-2 {
   line-height: 2;
+  p {
+    line-height: 2;
+  }
 }
 
 .lineheight-3 {
   line-height: 3;
+  p {
+    line-height: 3;
+  }
 }
 
 //** ========================Font Transforms========================== **//
@@ -154,42 +172,72 @@ h1, h2 {
 //** ========================Font Colors========================== **//
 .light-grey {
   color: $light-gray;
+  &:hover {
+    color: $light-gray;
+  }
 }
 
 .medium-grey {
   color: $medium-gray;
+  &:hover {
+    color: $medium-gray;
+  }
 }
 
 .dark-grey {
   color: $dark-gray;
+  &:hover {
+    color: $dark-gray;
+  }
 }
 
 .black {
   color: $black;
+  &:hover {
+    color: $black;
+  }
 }
 
 .body-colour {
   color: $body-colour;
+  &:hover {
+    color: $body-colour;
+  }
 }
 
 .white {
   color: $white;
+  &:hover {
+    color: $white;
+  }
 }
 
 .blue {
   color: $blue;
+  &:hover {
+    color: $blue;
+  }
 }
 
 .red {
   color: $red;
+  &:hover {
+    color: $red;
+  }
 }
 
 .green {
   color: $green;
+  &:hover {
+    color: $green;
+  }
 }
 
 .light-green {
   color: $light-green;
+  &:hover {
+    color: $light-green;
+  }
 }
 
 //** ========================Background Colors========================== **//

@@ -1,0 +1,20 @@
+.footer {
+  color: $white;;
+  a {
+    color: $white;
+  }
+  ul.menu a {
+    color: $white;
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  ul.menu>li:after {
+    color: $white;
+  }
+
+  p {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}

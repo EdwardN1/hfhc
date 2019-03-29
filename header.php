@@ -54,15 +54,20 @@
                             <div class="grid-x">
                                 <div class="telephone cell large-4">
                                     <div class="fontsize-18 lineheight-11">Home Care Enquires</div>
-                                    <div class="semi-bold fontsize-25 lineheight-13">0800 123 456</div>
+                                    <?php
+                                    $home_care_enquiries_number = get_field('home_care_enquiries_number','option');
+                                    $looking_for_staff_number = get_field('looking_for_staff_number','option');
+                                    $want_to_work_for_us_number = get_field('want_to_work_for_us_number','option');
+                                    ?>
+                                    <div class="semi-bold fontsize-25 lineheight-13"><a href="tel:<?php echo preg_replace('/\s+/', '', $home_care_enquiries_number)?>" class="white"><?php echo $home_care_enquiries_number; ?></a></div>
                                 </div>
                                 <div class="telephone cell large-4">
                                     <div class="fontsize-18 lineheight-11">Looking for Staff?</div>
-                                    <div class="semi-bold fontsize-25 lineheight-13">0800 789 000</div>
+                                    <div class="semi-bold fontsize-25 lineheight-13"><a href="tel:<?php echo preg_replace('/\s+/', '', $looking_for_staff_number)?>" class="white"><?php echo $looking_for_staff_number; ?></a></div>
                                 </div>
                                 <div class="telephone cell large-4">
                                     <div class="fontsize-18 lineheight-11">Want to Work for Us?</div>
-                                    <div class="semi-bold fontsize-25 lineheight-13">0800 123 456</div>
+                                    <div class="semi-bold fontsize-25 lineheight-13"><a href="tel:<?php echo preg_replace('/\s+/', '', $want_to_work_for_us_number)?>" class="white"><?php echo $want_to_work_for_us_number; ?></a></div>
                                 </div>
                             </div>
                         </div>
@@ -107,9 +112,9 @@
                             <input type="submit" class="header-search-submit button" value="" />
                         </form>
 
-                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook-icon.png"></a>
-                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin-icon.png"></a>
-                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-icon.png"></a>
+                        <a href="<?php the_field('facebook','option')?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook-icon.png"></a>
+                        <a href="<?php the_field('linkedin','option')?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin-icon.png"></a>
+                        <a href="<?php the_field('twitter','option')?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-icon.png"></a>
 
                     </div>
                 </div>

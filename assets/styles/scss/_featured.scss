@@ -1,0 +1,93 @@
+.featured-articles {
+  padding-top: 1.5em;
+  position: relative;
+  .heading {
+    padding-bottom: 0.5em;
+  }
+  .featured-article {
+    width: 248px;
+    height: 164px;
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    color: $body-font-color;
+    margin-bottom: 20px;
+    &:hover {
+      color: $body-font-color;
+    }
+    .feature-heading {
+      padding-top: 0.5em;
+      padding-bottom: 0.2em;
+      width: 100%;
+      position: relative;
+      &:before {
+        content: " ";
+        position: absolute;
+        top: 15px;
+        left: -8px;
+        width: 32px;
+        height: 27px;
+        background-image: url("../images/left-quote.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      &:after {
+        content: " ";
+        position: absolute;
+        bottom: 8px;
+        right: -8px;
+        width: 32px;
+        height: 27px;
+        background-image: url("../images/right-quote.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  .cell-number-1 {
+    .featured-article {
+      margin-left: auto;
+      margin-right: auto;
+      @include breakpoint(medium) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .cell-number-2 {
+    .featured-article {
+      margin-left: auto;
+      margin-right: auto;
+      @include breakpoint(medium) {
+        margin-right: 0;
+      }
+      @include breakpoint(large) {
+        margin-right: auto;
+      }
+    }
+  }
+
+  .cell-number-3 {
+    .featured-article {
+      margin-left: auto;
+      margin-right: auto;
+      @include breakpoint(medium) {
+        margin-left: 0;
+      }
+      @include breakpoint(large) {
+        margin-left: auto;
+      }
+    }
+  }
+
+  .cell-number-4 {
+    .featured-article {
+      margin-left: auto;
+      margin-right: auto;
+      @include breakpoint(medium) {
+        margin-right: 0;
+      }
+    }
+  }
+}

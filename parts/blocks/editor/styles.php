@@ -5,13 +5,13 @@ $version=filemtime(get_template_directory().'/assets/styles/style.css');
 echo '<link rel="stylesheet" type="text/css" href="'.get_template_directory_uri().'/assets/styles/style.css?v='.$version.'"/>';
 ?>
 <style>
-    .slick-button {
+    /*.slick-button {
         font-size: 40px;
-        /*width: auto;*/
-        /*height: 3em;*/
+        !*width: auto;*!
+        !*height: 3em;*!
     }
     .slick-button:after {
-        /*height: 3em;*/
+        !*height: 3em;*!
     }
     @media screen and ( min-width: 768px ) {
         .edit-post-visual-editor .editor-post-title,
@@ -22,6 +22,6 @@ echo '<link rel="stylesheet" type="text/css" href="'.get_template_directory_uri(
 
     .grid-container {
         max-width: 1260px;
-    }
+    }*/
 
 </style>

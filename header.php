@@ -87,10 +87,10 @@
                                     <div class="fontsize-17">Vacancies</div>
                                 </div>
                                 <div class="shrink cell pad-left-10">
-                                    <div class="text-center"><img
+                                    <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="white fontsize-17"><div class="text-center"><img
                                                 src="<?php echo get_template_directory_uri(); ?>/assets/images/Blog-Icon.png">
                                     </div>
-                                    <div class="fontsize-17">Blog</div>
+                                        <div class="fontsize-17">Blog</div></a>
                                 </div>
                             </div>
                         </div>

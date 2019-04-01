@@ -111,16 +111,25 @@ h1, h2 {
     p {
       line-height: ($i)/10;
     }
+    ul li {
+      line-height: ($i)/10;
+    }
   }
   .lineheight-1#{$i} {
     line-height: 1 + ($i)/10;
     p {
       line-height: 1 + ($i)/10;
     }
+    ul li {
+      line-height: 1 + ($i)/10;
+    }
   }
   .lineheight-2#{$i} {
     line-height: 2 + ($i)/10;
     p {
+      line-height: 2 + ($i)/10;
+    }
+    ul li {
       line-height: 2 + ($i)/10;
     }
   }
@@ -131,6 +140,9 @@ h1, h2 {
   p {
     line-height: 1;
   }
+  ul li {
+    line-height: 1;
+  }
 }
 
 .lineheight-2 {
@@ -138,11 +150,17 @@ h1, h2 {
   p {
     line-height: 2;
   }
+  ul li {
+    line-height: 2;
+  }
 }
 
 .lineheight-3 {
   line-height: 3;
   p {
+    line-height: 3;
+  }
+  ul li {
     line-height: 3;
   }
 }
@@ -285,6 +303,10 @@ h1, h2 {
   background-color: $light-blue;
 }
 
+.blog-background {
+  background-color: $background-grey;
+}
+
 //** ========================Icons========================== **//
 
 .telephone {
@@ -338,4 +360,14 @@ h1, h2 {
     background-size: contain;
   }
 
+}
+
+//** ========================Gutenberg Columns========================== **//
+
+.wp-block-column {
+  margin: 0 20px;
+}
+
+.wp-block-columns {
+  @include xy-grid-container($global-width, $global-padding);
 }

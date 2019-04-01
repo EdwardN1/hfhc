@@ -1,18 +1,21 @@
 <?php
 add_shortcode('callout', 'sc_callout');
 
-function sc_callout($atts, $content = null) {
-    $a = shortcode_atts( array(
+function sc_callout($atts, $content = null)
+{
+    $a = shortcode_atts(array(
         'width' => '',
         'heading' => '',
         'colour' => '',
-        'url' => ''
-    ), $atts );
+        'url' => '',
+        'quotes' => ''
+    ), $atts);
 
     $width = '';
     $heading = '';
     $colour = '';
     $url = '';
+    $quotes = '';
 
     $return = '';
 
@@ -22,36 +25,65 @@ function sc_callout($atts, $content = null) {
         };
     };
 
-    if (array_key_exists('width', $a)) {
-        if ($a['width'] != '') {
-            $heading = $a['width'];
+    if (array_key_exists('heading', $a)) {
+        if ($a['heading'] != '') {
+            $heading = $a['heading'];
         };
     };
 
-    if (array_key_exists('width', $a)) {
-        if ($a['width'] != '') {
-            $width = $a['width'];
+    if (array_key_exists('colour', $a)) {
+        if ($a['colour'] != '') {
+            $colour = $a['colour'];
         }
     };
 
-    if (array_key_exists('width', $a)) {
-        if ($a['width'] != '') {
-            $url = $a['width'];
+    if (array_key_exists('url', $a)) {
+        if ($a['url'] != '') {
+            $url = $a['url'];
         };
     };
 
-    $calloutID = uniqid('ts');
+    if (array_key_exists('quotes', $a)) {
+        if ($a['quotes'] != '') {
+            $quotes = $a['quotes'];
+        };
+    };
 
-    if(basename( get_page_template() )=='master-page.php') {
-        if ( ( $tourname != '' ) ) {
-            $tourURL = $tourname;
-            $return .= '<div id="'.$tourID.'" class="large reveal text-center tour" data-reveal style="height: 80vh;">';
-            $return .= '<iframe src="'.$tourURL.'" style="width: 100%; height: 95%;"></iframe>';
-            $return .= '<button class="close-button" data-close aria-label="Close reveal" type="button"><span aria-hidden="true">&times;</span></button>';
-            $return .= '</div>';
-            $return .= '<a href="#'.$tourID.'" data-open="'.$tourID.'">'.$content.'</a>';
-        }
+    $calloutID = uniqid('tshfc');
+
+    if($width=='') {
+        $width = '100%';
+    } else {
+        $width .= 'px';
     }
+
+    if($quotes != '') {
+        $quotes = ' quoted';
+    }
+
+    if (($url != '')) {
+        if (strtolower($colour) == 'blue') {
+            $return .= '<div class="blue-background callout linked" style="width: '.$width.';">';
+            $return .= '<a class="white block text-center" href="'.$url.'">';
+        } else {
+            $return .= '<div class="light-green-background callout linked" style="width: '.$width.';">';
+            $return .= '<a class="block text-center body-colour" href="'.$url.'">';
+        }
+        $return .= '<h3 class="semi-bold font-size-34'.$quotes.'">'.$heading.'</h3>';
+        $return .= '<p>'.$content.'</p>';
+        $return .= '</a></div>';
+
+    } else {
+        if (strtolower($colour) == 'blue') {
+            $return .= '<div class="blue-background callout" style="width: '.$width.';">';
+        } else {
+            $return .= '<div class="light-green-background callout" style="width: '.$width.';">';
+        }
+        $return .= '<h3 class="semi-bold font-size-34'.$quotes.'>'.$heading.'</h3>';
+        $return .= '<p>'.$content.'</p>';
+        $return .= '</div>';
+    }
+
 
     return $return;
 }

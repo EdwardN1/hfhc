@@ -21,7 +21,7 @@
 }
 //** ========================H Tags========================== **//
 h1, h2 {
-  font-size: 48px;
+  font-size: 42px;
   font-weight: $font-semi-bold;
   line-height: 1.2;
 }
@@ -362,10 +362,21 @@ h1, h2 {
 
 }
 
+.social-icon {
+  padding-right: 2px;
+  img {
+    width: 39px;
+    height: auto;
+  }
+}
+
 //** ========================Gutenberg Columns========================== **//
 
 .wp-block-column {
-  margin: 0 20px;
+  /*margin: 0 20px;*/
+  .grid-container {
+    padding: 0;
+  }
 }
 
 .wp-block-columns {

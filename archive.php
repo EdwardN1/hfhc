@@ -9,7 +9,7 @@ get_header(); ?>
 			
 	<div class="content">
 	
-		<div class="inner-content grid-x grid-margin-x grid-padding-x">
+		<div class="inner-content grid-x">
 		
 		    <main class="main small-12 medium-12 large-12 cell" role="main">
 			    
@@ -32,6 +32,10 @@ get_header(); ?>
 					<?php get_template_part( 'parts/content', 'missing' ); ?>
 						
 				<?php endif; ?>
+
+                <div class="blog-footer grid-container">
+                    <?php the_field('blog_archive_footer','option'); ?>
+                </div>
 		
 			</main> <!-- end #main -->
 	

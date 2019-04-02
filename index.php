@@ -8,34 +8,55 @@
  */
 
 get_header(); ?>
-			
-	<div class="content">
-	
-		<div class="inner-content grid-x grid-margin-x grid-padding-x">
-	
-		    <main class="main small-12 medium-12 large-12 cell" role="main">
-		    
-			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			 
-					<!-- To see additional archive styles, visit the /parts directory -->
+
+<?php $image = get_field( 'blog_archive_header_image', 'option' ); ?>
+<?php $imageURL = $image['url']; ?>
+<?php $imageALT = $image['alt']; ?>
+
+    <div class="heading-image" style="background-image: url(<?php echo $imageURL; ?>)">
+        <div class="white-overlay blog">
+            <div class="grid-container">
+				<?php $heading = get_field( 'blog_archive_heading', 'option' ); ?>
+                <h1><?php echo $heading; ?></h1>
+				<?php $description = get_field( 'blog_archive_description', 'option' ); ?>
+                <p><?php echo $description; ?></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="inner-content grid-x">
+
+
+            <main class="main small-12 medium-12 large-12 cell" role="main">
+
+
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+                    <!-- To see additional archive styles, visit the /parts directory -->
 					<?php get_template_part( 'parts/loop', 'archive' ); ?>
-				    
-				<?php endwhile; ?>	
+
+				<?php endwhile; ?>
 
 					<?php joints_page_navi(); ?>
-					
+
 				<?php else : ?>
-											
+
 					<?php get_template_part( 'parts/content', 'missing' ); ?>
-						
+
 				<?php endif; ?>
-																								
-		    </main> <!-- end #main -->
-		    
-		    <?php //get_sidebar(); ?>
 
-		</div> <!-- end #inner-content -->
+            </main> <!-- end #main -->
 
-	</div> <!-- end #content -->
+			<?php //get_sidebar(); ?>
+
+        </div> <!-- end #inner-content -->
+
+        <div class="blog-footer grid-container">
+			<?php the_field( 'blog_archive_footer', 'option' ); ?>
+        </div>
+
+    </div> <!-- end #content -->
 
 <?php get_footer(); ?>

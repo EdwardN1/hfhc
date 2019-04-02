@@ -1,6 +1,6 @@
 .heading-image {
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: right center;
   //max-height: 416px;
   height: 30vw;
@@ -13,7 +13,7 @@
   }
 
   .white-overlay {
-    height: 40vw;
+    height: 30vw;
   }
 
   h1, h2 {

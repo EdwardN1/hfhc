@@ -101,7 +101,7 @@
             <div id="searchbar" class="grid-container">
                 <div class="grid-x">
                     <div class="large-8 cell pad-top-15 pad-bottom-15">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png">
+                        <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png"></a>
                     </div>
                     <div class="cell auto"></div>
                     <div class="cell shrink pad-top-48">
@@ -112,9 +112,9 @@
                             <input type="submit" class="header-search-submit button" value="" />
                         </form>
 
-                        <a href="<?php the_field('facebook','option')?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook-icon.png"></a>
-                        <a href="<?php the_field('linkedin','option')?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin-icon.png"></a>
-                        <a href="<?php the_field('twitter','option')?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-icon.png"></a>
+                        <a href="<?php the_field('facebook','option')?>" target="_blank" class="social-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebookicon.svg"></a>
+                        <a href="<?php the_field('linkedin','option')?>" target="_blank" class="social-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedInicon.svg"></a>
+                        <a href="<?php the_field('twitter','option')?>" target="_blank" class="social-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/twittericon.svg"></a>
 
                     </div>
                 </div>

@@ -1,0 +1,59 @@
+.blog {
+  .main {
+    .blog-background:first-of-type {
+      padding-top: 24px;
+    }
+    .blog-background:last-of-type {
+      padding-bottom: 24px;
+    }
+  }
+}
+
+.blog-footer {
+  padding-top: 46px;
+  padding-bottom: 24px;
+}
+
+.blog-background {
+  .quoted {
+    position: relative;
+    padding-left: 48px;
+    padding-right: 48px;
+    &:before {
+      content: " ";
+      width: 33px;
+      height: 27px;
+      position: absolute;
+      background-image: url("../images/left-blue-quote.png");
+      background-size: contain;
+      top: 0;
+      left: 0;
+    }
+    &:after {
+      content: " ";
+      width: 33px;
+      height: 27px;
+      position: absolute;
+      background-image: url("../images/right-blue-quote.png");
+      background-size: contain;
+      top: 0;
+      right: 0;
+    }
+  }
+  .img {
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+
+.white-overlay {
+  &.blog {
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+68&1+47,0+68 */
+      background: -moz-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 27%, rgba(255, 255, 255, 0) 68%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 27%, rgba(255, 255, 255, 0) 68%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 27%, rgba(255, 255, 255, 0) 68%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=1); /* IE6-9 */
+  }
+}

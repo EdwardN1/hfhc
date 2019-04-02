@@ -38,9 +38,9 @@
                             <div class="large-3 medium-6 small-12 fontsize-14 lineheight-19">
                                 <p>
                                     SOCIAL MEDIA:<br>
-                                    <a href="<?php the_field('facebook','option')?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook-icon.png"></a>
-                                    <a href="<?php the_field('linkedin','option')?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin-icon.png"></a>
-                                    <a href="<?php the_field('twitter','option')?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-icon.png"></a>
+                                    <a href="<?php the_field('facebook','option')?>" target="_blank" class="social-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebookicon-white.svg"></a>
+                                    <a href="<?php the_field('linkedin','option')?>" target="_blank" class="social-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedInicon-white.svg"></a>
+                                    <a href="<?php the_field('twitter','option')?>" target="_blank" class="social-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/twittericon-white.svg"></a>
 
 
                                 </p>

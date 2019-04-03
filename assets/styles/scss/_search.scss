@@ -1,6 +1,6 @@
 .header-search-field {
   display: inline-block;
-  width: 212px;
+  width: 112px;
   border: 1px solid $body-colour;
   border-right: none;
   border-bottom-left-radius: 1.5em;
@@ -8,6 +8,9 @@
   margin: 0;
   vertical-align: middle;
   box-shadow: none;
+  @include breakpoint(medium) {
+    width: 212px;
+  }
 }
 
 .header-search-submit {

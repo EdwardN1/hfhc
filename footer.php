@@ -10,7 +10,7 @@
 					
 				<footer class="footer blue-background" role="contentinfo">
 					
-					<div class="inner-footer grid-x" style="background: #5dcae3;">
+					<div class="inner-footer grid-x show-for-medium" style="background: #5dcae3;">
 						<div class="cell auto">&nbsp;</div>
 						<div class="shrink cell">
 							<nav class="white pad-top-10 pad-bottom-10" role="navigation">

@@ -1,5 +1,5 @@
 //** ========================Padding========================== **//
-@for $i from 1 through 600 {
+@for $i from 0 through 600 {
   .pad-left-#{$i} {
     padding-left: #{$i}px;
   }
@@ -310,19 +310,34 @@ h1, h2 {
 //** ========================Icons========================== **//
 
 .telephone {
-  padding-left: 60px;
+  padding-left: 0;
   position: relative;
+  @include breakpoint(920) {
+    padding-left: 40px;
+  }
+  @include breakpoint(large) {
+    padding-left: 60px;
+  }
   &:before {
     content: " ";
-    width: 44px;
+    width: 0;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    display: block;
+    display: none;
     background-image: url("../images/phone.png");
     background-repeat: no-repeat;
     background-position: top center;
+    background-size: contain;
+    @include breakpoint(920) {
+      width: 34px;
+      display: block;
+    }
+    @include breakpoint(large) {
+      width: 44px;
+      display: block;
+    }
   }
 }
 

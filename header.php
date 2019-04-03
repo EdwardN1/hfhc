@@ -50,47 +50,48 @@
             <div class="blue-background white pad-top-30 pad-bottom-30">
                 <div class="grid-container">
                     <div class="grid-x">
-                        <div class="cell large-9">
+                        <div class="cell large-9 medium-8 small-12">
                             <div class="grid-x">
-                                <div class="telephone cell large-4">
-                                    <div class="fontsize-18 lineheight-11">Home Care Enquires</div>
+                                <div class="telephone cell large-4 medium-3 small-4">
+                                    <div class="fontsize-xlarge-18 fontsize-medium-16 lineheight-11">Home Care Enquires</div>
                                     <?php
                                     $home_care_enquiries_number = get_field('home_care_enquiries_number','option');
                                     $looking_for_staff_number = get_field('looking_for_staff_number','option');
                                     $want_to_work_for_us_number = get_field('want_to_work_for_us_number','option');
                                     ?>
-                                    <div class="semi-bold fontsize-25 lineheight-13"><a href="tel:<?php echo preg_replace('/\s+/', '', $home_care_enquiries_number)?>" class="white"><?php echo $home_care_enquiries_number; ?></a></div>
+                                    <div class="semi-bold fontsize-xlarge-25 fontsize-large-20 lineheight-13"><a href="tel:<?php echo preg_replace('/\s+/', '', $home_care_enquiries_number)?>" class="white"><?php echo $home_care_enquiries_number; ?></a></div>
                                 </div>
-                                <div class="telephone cell large-4">
-                                    <div class="fontsize-18 lineheight-11">Looking for Staff?</div>
-                                    <div class="semi-bold fontsize-25 lineheight-13"><a href="tel:<?php echo preg_replace('/\s+/', '', $looking_for_staff_number)?>" class="white"><?php echo $looking_for_staff_number; ?></a></div>
+                                <div class="telephone cell large-4 medium-4 small-4">
+                                    <div class="fontsize-xlarge-18 fontsize-medium-16 lineheight-11">Looking for Staff?</div>
+                                    <div class="semi-bold fontsize-xlarge-25 fontsize-large-20 lineheight-13"><a href="tel:<?php echo preg_replace('/\s+/', '', $looking_for_staff_number)?>" class="white"><?php echo $looking_for_staff_number; ?></a></div>
                                 </div>
-                                <div class="telephone cell large-4">
-                                    <div class="fontsize-18 lineheight-11">Want to Work for Us?</div>
-                                    <div class="semi-bold fontsize-25 lineheight-13"><a href="tel:<?php echo preg_replace('/\s+/', '', $want_to_work_for_us_number)?>" class="white"><?php echo $want_to_work_for_us_number; ?></a></div>
+                                <div class="telephone cell large-4 medium-4 small-4">
+                                    <div class="fontsize-xlarge-18 fontsize-medium-16 lineheight-11">Want to Work for Us?</div>
+                                    <div class="semi-bold fontsize-xlarge-25 fontsize-large-20 lineheight-13"><a href="tel:<?php echo preg_replace('/\s+/', '', $want_to_work_for_us_number)?>" class="white"><?php echo $want_to_work_for_us_number; ?></a></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="cell large-3">
+                        <div class="show-for-small-only">&nbsp;</div>
+                        <div class="cell large-3 medium-4 small-12 show-for-medium">
                             <div class="grid-x">
                                 <div class="cell auto"></div>
-                                <div class="shrink cell pad-right-10">
+                                <div class="large-shrink medium-4 small-4 cell pad-right-10">
                                     <div class="text-center"><img
                                                 src="<?php echo get_template_directory_uri(); ?>/assets/images/Request-a-Call-Icon.png">
                                     </div>
-                                    <div class="fontsize-17">Request a call</div>
+                                    <div class="fontsize-xlarge-17 fontsize-medium-14 text-center">Request a call</div>
                                 </div>
-                                <div class="shrink cell pad-right-10 pad-left-10">
+                                <div class="large-shrink medium-4 small-4 cell pad-right-10 pad-left-10">
                                     <div class="text-center"><img
                                                 src="<?php echo get_template_directory_uri(); ?>/assets/images/Vacancies-Icon.png">
                                     </div>
-                                    <div class="fontsize-17">Vacancies</div>
+                                    <div class="fontsize-xlarge-17 fontsize-medium-14 text-center">Vacancies</div>
                                 </div>
-                                <div class="shrink cell pad-left-10">
+                                <div class="large-shrink medium-4 small-4 cell pad-left-10">
                                     <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="white fontsize-17"><div class="text-center"><img
                                                 src="<?php echo get_template_directory_uri(); ?>/assets/images/Blog-Icon.png">
                                     </div>
-                                        <div class="fontsize-17">Blog</div></a>
+                                        <div class="fontsize-xlarge-17 fontsize-medium-14 text-center">Blog</div></a>
                                 </div>
                             </div>
                         </div>
@@ -98,9 +99,9 @@
                 </div>
             </div>
 
-            <div id="searchbar" class="grid-container">
+            <div id="searchbar" class="grid-container show-for-large">
                 <div class="grid-x">
-                    <div class="large-8 cell pad-top-15 pad-bottom-15">
+                    <div class="large-7 medium-4 small-6 cell pad-top-15 pad-bottom-15">
                         <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png"></a>
                     </div>
                     <div class="cell auto"></div>
@@ -108,6 +109,28 @@
 
                         <form role="search" method="get" class="search-form inline-block" action="<?php echo home_url( '/' ); ?>">
                                 <input type="search" class="header-search-field" placeholder="<?php echo esc_attr_x( 'Search...', 'jointswp' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'jointswp' ) ?>" />
+
+                            <input type="submit" class="header-search-submit button" value="" />
+                        </form>
+
+                        <a href="<?php the_field('facebook','option')?>" target="_blank" class="social-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebookicon.svg"></a>
+                        <a href="<?php the_field('linkedin','option')?>" target="_blank" class="social-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedInicon.svg"></a>
+                        <a href="<?php the_field('twitter','option')?>" target="_blank" class="social-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/twittericon.svg"></a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="searchbarmobile" class="grid-container hide-for-large">
+                <div class="grid-x">
+                    <div class="large-8 medium-4 small-6 cell pad-top-15 pad-bottom-15">
+                        <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png"></a>
+                    </div>
+                    <div class="cell auto"></div>
+                    <div class="cell shrink pad-top-24">
+
+                        <form role="search" method="get" class="search-form inline-block show-for-medium" action="<?php echo home_url( '/' ); ?>">
+                            <input type="search" class="header-search-field" placeholder="<?php echo esc_attr_x( 'Search...', 'jointswp' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'jointswp' ) ?>" />
 
                             <input type="submit" class="header-search-submit button" value="" />
                         </form>

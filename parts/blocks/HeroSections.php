@@ -67,7 +67,7 @@
 				$button_colour  = get_sub_field( 'button_colour' );
 				$button_text    = get_sub_field( 'button_text' );
 				$button_icon = get_sub_field('button_icon');
-				$slickNavigator .= '<div class="large-4">';
+				$slickNavigator .= '<div class="large-4 medium-4 small-4">';
 				$buttonHTML = '<a class="slick-button ' . $button_colour . '" data-slide="' . $slideCount . '" data-slider-id="' . $sliderID . '">' . $button_text . '</a>';
 				if($button_icon=='People') {
                     $buttonHTML = '<a class="slick-button people ' . $button_colour . '" data-slide="' . $slideCount . '" data-slider-id="' . $sliderID . '">' . $button_text . '</a>';

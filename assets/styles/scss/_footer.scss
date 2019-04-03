@@ -5,8 +5,11 @@
   }
   ul.menu a {
     color: $white;
-    font-size: 22px;
+    font-size: 15px;
     line-height: 1;
+    @include breakpoint(large) {
+      font-size: 22px;
+    }
   }
 
   ul.menu>li:after {

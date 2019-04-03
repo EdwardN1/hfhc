@@ -4,7 +4,10 @@ ul.menu {
 
   a {
     color: $body-colour;
-    font-size: 22px;
+    font-size: 16px;
+    @include breakpoint(large) {
+      font-size: 22px;
+    }
   }
 
   .active > a {
@@ -16,7 +19,10 @@ ul.menu {
     list-style: none;
     min-width: 300px;
     a {
-      font-size: 18px;
+      font-size: 14px;
+      @include breakpoint(large) {
+        font-size: 18px;
+      }
     }
   }
 

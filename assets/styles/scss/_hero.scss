@@ -2,34 +2,69 @@
   background-repeat: no-repeat;
   background-size: cover;
   //max-height: 416px;
-  height: 25vw;
-  font-size: 26px;
-  line-height: 1.4;
-
-  p {
+  height: 30vw;
+  font-size: 22px;
+  line-height: 1.2;
+  @include breakpoint(xlarge) {
     font-size: 26px;
-    line-height: 1.4;
+  }
+  p {
+    font-size: 22px;
+    @include breakpoint(xlarge) {
+      font-size: 26px;
+    }
+    line-height: 1.2;
+  }
+  h1, h2 {
+    font-size: 30px;
+    @include breakpoint(xlarge) {
+      font-size: 42px;
+    }
   }
 }
 
 .slick-button {
   border: 1px solid $white;
   display: block;
-  width: 407px;
-  height: 135px;
   font-weight: $font-semi-bold;
-  font-size: 50px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  padding-right: 2em;
-  padding-left: 2em;
-  padding-top: 0.3em;
   line-height: 1;
   position: relative;
   margin-top: -0.5em;
   color: $white;
+  font-size: 18px;
+  padding-right: 0;
+  padding-left: 0;
+  padding-top: 0.3em;
+  width: 90px;
+  height: 50px;
 
+  @include breakpoint(medium) {
+    font-size: 20px;
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-top: 0.3em;
+    width: 180px;
+    height: 55px;
+  }
+  @include breakpoint(large) {
+    font-size: 36px;
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-top: 0.3em;
+    width: 307px;
+    height: 95px;
+  }
+  @include breakpoint(xlarge) {
+    font-size: 50px;
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-top: 0.3em;
+    width: 407px;
+    height: 135px;
+  }
   &:hover {
     color: $white;
   }
@@ -38,11 +73,27 @@
     position: absolute;
     top: 0;
     right: 0;
-    height: 135px;
-    width: 70px;
+    width: 50px;
+    height: 55px;
     background-repeat: no-repeat;
     background-position: center center;
     content: " ";
+    background-size: 0;
+    @include breakpoint(medium) {
+      width: 50px;
+      height: 55px;
+      background-size: 26px;
+    }
+    @include breakpoint(large) {
+      height: 95px;
+      width: 70px;
+      background-size: auto;
+    }
+    @include breakpoint(xlarge) {
+      height: 135px;
+      width: 70px;
+      background-size: auto;
+    }
   }
 
   &:before {
@@ -54,6 +105,16 @@
     background-repeat: no-repeat;
     background-position: center center;
     content: " ";
+    background-size: contain;
+    @include breakpoint(medium) {
+      height: 35px;
+    }
+    @include breakpoint(large) {
+      height: 35px;
+    }
+    @include breakpoint(xlarge) {
+      height: 60px;
+    }
   }
 
   &.Red {

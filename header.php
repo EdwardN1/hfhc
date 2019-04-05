@@ -40,34 +40,34 @@
 <div class="off-canvas-wrapper">
 
     <!-- Load off-canvas container. Feel free to remove if not using. -->
-    <?php /*get_template_part( 'parts/content', 'offcanvas' ); */ ?><!--
-			--><?php /*get_template_part( 'parts/content', 'offcanvas-right' ); */ ?>
+    <?php get_template_part( 'parts/content', 'offcanvas' );  ?>
+    <?php //get_template_part( 'parts/content', 'offcanvas-right' );  ?>
 
     <div class="off-canvas-content" data-off-canvas-content>
 
         <header class="header" role="banner">
 
-            <div class="blue-background white pad-top-30 pad-bottom-30">
+            <div class="blue-background white top-banner">
                 <div class="grid-container">
                     <div class="grid-x">
                         <div class="cell large-9 medium-8 small-12">
                             <div class="grid-x">
                                 <div class="telephone cell large-4 medium-3 small-4">
-                                    <div class="fontsize-xlarge-18 fontsize-medium-16 lineheight-11">Home Care Enquires</div>
+                                    <div class="description">Home Care Enquires</div>
                                     <?php
                                     $home_care_enquiries_number = get_field('home_care_enquiries_number','option');
                                     $looking_for_staff_number = get_field('looking_for_staff_number','option');
                                     $want_to_work_for_us_number = get_field('want_to_work_for_us_number','option');
                                     ?>
-                                    <div class="semi-bold fontsize-xlarge-25 fontsize-large-20 lineheight-13"><a href="tel:<?php echo preg_replace('/\s+/', '', $home_care_enquiries_number)?>" class="white"><?php echo $home_care_enquiries_number; ?></a></div>
+                                    <div class="semi-bold"><a href="tel:<?php echo preg_replace('/\s+/', '', $home_care_enquiries_number)?>" class="white"><?php echo $home_care_enquiries_number; ?></a></div>
                                 </div>
                                 <div class="telephone cell large-4 medium-4 small-4">
-                                    <div class="fontsize-xlarge-18 fontsize-medium-16 lineheight-11">Looking for Staff?</div>
-                                    <div class="semi-bold fontsize-xlarge-25 fontsize-large-20 lineheight-13"><a href="tel:<?php echo preg_replace('/\s+/', '', $looking_for_staff_number)?>" class="white"><?php echo $looking_for_staff_number; ?></a></div>
+                                    <div class="description">Looking for Staff?</div>
+                                    <div class="semi-bold"><a href="tel:<?php echo preg_replace('/\s+/', '', $looking_for_staff_number)?>" class="white"><?php echo $looking_for_staff_number; ?></a></div>
                                 </div>
                                 <div class="telephone cell large-4 medium-4 small-4">
-                                    <div class="fontsize-xlarge-18 fontsize-medium-16 lineheight-11">Want to Work for Us?</div>
-                                    <div class="semi-bold fontsize-xlarge-25 fontsize-large-20 lineheight-13"><a href="tel:<?php echo preg_replace('/\s+/', '', $want_to_work_for_us_number)?>" class="white"><?php echo $want_to_work_for_us_number; ?></a></div>
+                                    <div class="description">Want to Work for Us?</div>
+                                    <div class="semi-bold"><a href="tel:<?php echo preg_replace('/\s+/', '', $want_to_work_for_us_number)?>" class="white"><?php echo $want_to_work_for_us_number; ?></a></div>
                                 </div>
                             </div>
                         </div>
@@ -89,9 +89,9 @@
                                 </div>
                                 <div class="large-shrink medium-4 small-4 cell pad-left-10">
                                     <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="white fontsize-17"><div class="text-center"><img
-                                                src="<?php echo get_template_directory_uri(); ?>/assets/images/Blog-Icon.png">
+                                                src="<?php echo get_template_directory_uri(); ?>/assets/images/blog-icon-white.png">
                                     </div>
-                                        <div class="fontsize-xlarge-17 fontsize-medium-14 text-center">Blog</div></a>
+                                        <div class="fontsize-xlarge-17 fontsize-medium-14 text-center pad-top-1">Blog</div></a>
                                 </div>
                             </div>
                         </div>

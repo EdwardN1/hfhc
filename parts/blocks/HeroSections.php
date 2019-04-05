@@ -3,6 +3,7 @@
 <?php $footer_background_colour = get_field( 'footer_background_colour' ); ?>
 <?php $footerClass = ''; ?>
 <?php $overlayClass = ' class="white-overlay"'; ?>
+<?php //$overlayClass = ''; ?>
 <?php if ( $footer_background_colour == 'Green' ) {
 	$footerClass = 'class="light-green-background"';
 } ?>

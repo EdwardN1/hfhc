@@ -1,25 +1,38 @@
 .heading-image {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right center;
   //max-height: 416px;
-  height: 30vw;
-  font-size: 26px;
-  line-height: 1.4;
-
-  p {
-    font-size: 26px;
-    line-height: 1.4;
+  line-height: 1.2;
+  background-position: center right;
+  height: 70vw;
+  font-size: 16px;
+  @include breakpoint(medium) {
+    font-size: 22px;
+    height: 45vw;
   }
-
-  .white-overlay {
+  @include breakpoint(920) {
     height: 30vw;
   }
-
+  @include breakpoint(xlarge) {
+    font-size: 26px;
+  }
+  p {
+    font-size: 16px;
+    @include breakpoint(medium) {
+      font-size: 22px;
+    }
+    @include breakpoint(xlarge) {
+      font-size: 26px;
+    }
+    line-height: 1.2;
+  }
   h1, h2 {
-    font-size: 80px;
-    padding-top: 40px;
-    line-height: 1;
-    padding-bottom: 30px;
+    font-size: 22px;
+    @include breakpoint(medium) {
+      font-size: 30px;
+    }
+    @include breakpoint(xlarge) {
+      font-size: 42px;
+    }
   }
 }

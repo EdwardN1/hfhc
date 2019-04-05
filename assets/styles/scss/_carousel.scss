@@ -1,5 +1,8 @@
 .carousel-section {
-  padding-bottom: 2rem;
+  padding-bottom: 0;
+  @include breakpoint(420) {
+    padding-bottom: 2rem;
+  }
   .image {
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,15 +20,20 @@
 
   .slick-slide {
     margin: 0 22px;
+    height: 355px;
+    @include breakpoint(420) {
+      height: 100%;
+    }
   }
 
   .slick-list {
     margin: 0 -22px;
-    padding-bottom: 1em;
+    /*padding-bottom: 1em;*/
   }
 
   .slide-link {
     background-color: rgba(63, 194, 223, 0.8);
+    background-repeat: no-repeat;
     position: absolute;
     top: 0;
     left: 0;
@@ -34,6 +42,7 @@
     display: block;
     opacity: 0;
     transition: opacity .6s;
+
     &:focus {
       outline: none;
     }
@@ -45,11 +54,17 @@
         opacity: 1;
       }
     }
+
     .title {
       line-height: 1.2;
       padding: 1em;
+      @include breakpoint(medium) {
+        padding-left: 1.7em;
+        padding-right: 1.7em;
+      }
       a {
         color: $body-colour;
+
         &:hover {
           color: $body-colour;
         }
@@ -123,5 +138,16 @@
     }
   }
 
-
+  .carousel-frame {
+    padding-left: 50px;
+    padding-right: 50px;
+    @include breakpoint(1260) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    @include breakpoint(1400) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }

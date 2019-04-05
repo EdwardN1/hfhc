@@ -2,8 +2,8 @@
 
 
 <div class="grid-container featured-articles">
-    <div class="heading fontsize-48 lineheight-15 text-center semi-bold">
-        <?php echo $heading; ?>
+    <div class="heading text-center semi-bold">
+        <h2><?php echo $heading; ?></h2>
     </div>
     <?php if (have_rows('articles')) : ?>
         <div class="grid-x">

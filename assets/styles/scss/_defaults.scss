@@ -19,12 +19,6 @@
     padding-bottom: #{$i}px;
   }
 }
-//** ========================H Tags========================== **//
-h1, h2 {
-  font-size: 42px;
-  font-weight: $font-semi-bold;
-  line-height: 1.2;
-}
 
 //** ========================Font Sizes========================== **//
 @for $i from 1 through 200 {
@@ -395,5 +389,40 @@ h1, h2 {
 }
 
 .wp-block-columns {
-  @include xy-grid-container($global-width, $global-padding);
+  max-width: 1260px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  @include breakpoint(xlarge) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+//** ========================P tag========================== **//
+
+body, p {
+  font-size: 16px;
+  line-height: 1.2;
+  @include breakpoint(medium) {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+  @include breakpoint(xlarge) {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+}
+
+//** ========================H Tags========================== **//
+h1, h2 {
+  font-size: 22px;
+  @include breakpoint(medium) {
+    font-size: 30px;
+  }
+  @include breakpoint(xlarge) {
+    font-size: 42px;
+  }
+  font-weight: $font-semi-bold;
+  line-height: 1.2;
 }

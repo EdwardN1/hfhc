@@ -16,7 +16,12 @@
     <div class="show-for-small-only">
         <ul class="menu">
             <!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
-            <li><a data-toggle="off-canvas"><?php _e( 'Menu', 'jointswp' ); ?></a></li>
+            <li><a data-toggle="off-canvas" class="hamburger-icon">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                    <div class="bar4"></div>
+                </a></li>
         </ul>
     </div>
 </div>

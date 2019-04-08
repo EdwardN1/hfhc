@@ -1,4 +1,4 @@
-ul.menu {
+ul#main-nav.menu {
   color: $body-colour;
   font-family: $body-font-family;
 
@@ -59,3 +59,15 @@ ul#main-nav >li:last-child {
       content: "";
     }
 }*/
+.hamburger-icon {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.2rem !important;
+  .bar1, .bar2, .bar3, .bar4 {
+    width: 35px;
+    height: 3px;
+    background-color: $blue;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+}

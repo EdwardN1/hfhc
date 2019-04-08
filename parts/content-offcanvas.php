@@ -8,15 +8,20 @@
 
 <div class="off-canvas position-left" id="off-canvas" data-off-canvas>
     <div>
-        <a data-toggle="off-canvas" class="fi-arrow-right large"><<< Close</a>
+        <a data-toggle="off-canvas" class="close-button white">X</a>
     </div>
-    <h3><a href="/services/">Services</a></h3>
-	<?php joints_off_canvas_nav(); ?>
 
-	<?php if ( is_active_sidebar( 'offcanvas' ) ) : ?>
+	<div class="blue-background white pad-top-50 pad-bottom-10">
+        <?php get_template_part('parts/header','icons'); ?>
+    </div>
+    <div class="white-background pad-top-10 pad-bottom-10 pad-left-10">
+        <form role="search" method="get" class="search-form inline-block" action="<?php echo home_url( '/' ); ?>">
+            <input type="search" class="header-search-field" placeholder="<?php echo esc_attr_x( 'Search...', 'jointswp' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'jointswp' ) ?>" />
 
-		<?php dynamic_sidebar( 'offcanvas' ); ?>
-
-	<?php endif; ?>
-
+            <input type="submit" class="header-search-submit button" value="" />
+        </form>
+    </div>
+    <div>
+        <div class="cell shrink"><?php joints_vertical_nav(); ?></div>
+    </div>
 </div>

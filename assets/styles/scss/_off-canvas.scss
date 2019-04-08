@@ -1,0 +1,27 @@
+.off-canvas {
+  background: $white;
+  &.position-left {
+    width: 300px;
+  }
+  .close-button {
+    right: 0.5rem;
+    font-size: 26px;
+  }
+  .header-icons {
+    .pad-top-6 {
+      padding-top: 0;
+    }
+  }
+  .header-search-field {
+    width: 230px;
+  }
+  &.position-left.is-transition-push {
+    box-shadow: none;
+    /*border-right: 1px solid $grey;*/
+    box-shadow: 13px 0 20px -13px hsla(0,0%,4%,.25);
+  }
+}
+
+.off-canvas-content.is-open-left.has-transition-push {
+  transform: translateX(300px);
+}

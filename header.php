@@ -73,27 +73,7 @@
                         </div>
                         <div class="show-for-small-only">&nbsp;</div>
                         <div class="cell large-3 medium-4 small-12 show-for-medium">
-                            <div class="grid-x">
-                                <div class="cell auto"></div>
-                                <div class="large-shrink medium-4 small-4 cell pad-right-10">
-                                    <div class="text-center"><img
-                                                src="<?php echo get_template_directory_uri(); ?>/assets/images/Request-a-Call-Icon.png">
-                                    </div>
-                                    <div class="fontsize-xlarge-17 fontsize-medium-14 text-center">Request a call</div>
-                                </div>
-                                <div class="large-shrink medium-4 small-4 cell pad-right-10 pad-left-10">
-                                    <div class="text-center"><img
-                                                src="<?php echo get_template_directory_uri(); ?>/assets/images/Vacancies-Icon.png">
-                                    </div>
-                                    <div class="fontsize-xlarge-17 fontsize-medium-14 text-center">Vacancies</div>
-                                </div>
-                                <div class="large-shrink medium-4 small-4 cell pad-left-10">
-                                    <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="white fontsize-17"><div class="text-center"><img
-                                                src="<?php echo get_template_directory_uri(); ?>/assets/images/blog-icon-white.png">
-                                    </div>
-                                        <div class="fontsize-xlarge-17 fontsize-medium-14 text-center pad-top-1">Blog</div></a>
-                                </div>
-                            </div>
+                           <?php get_template_part('parts/header','icons'); ?>
                         </div>
                     </div>
                 </div>

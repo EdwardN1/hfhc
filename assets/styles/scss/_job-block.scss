@@ -1,0 +1,36 @@
+.job-block {
+  .mainheading {
+    font-size: 48px;
+    margin-bottom: 0.5em;
+  }
+  .subheading {
+    font-size: 24px;
+    margin-bottom: 0.75em;
+  }
+  .jobimage {
+    img {
+      height: 100%;
+      width: auto;
+    }
+    overflow: hidden;
+  }
+  .maincontent {
+    font-size: 24px;
+    line-height: 30px;
+    p {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+  .joblink {
+    font-size: 18px;
+  }
+  .grid-container {
+    position: relative;
+    .social {
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+    }
+  }
+}

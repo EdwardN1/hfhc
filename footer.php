@@ -41,11 +41,12 @@
                                     <a href="<?php the_field('facebook','option')?>" target="_blank" class="social-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebookicon-white.svg"></a>
                                     <a href="<?php the_field('linkedin','option')?>" target="_blank" class="social-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedInicon-white.svg"></a>
                                     <a href="<?php the_field('twitter','option')?>" target="_blank" class="social-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/twittericon-white.svg"></a>
-
-
                                 </p>
                                 <div>
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Request-a-Call-Icon.png"> REQUEST A CALL
+                                </div>
+                                <div>
+                                    <?php the_field('footer_column_4','option'); ?>
                                 </div>
                             </div>
                         </div>

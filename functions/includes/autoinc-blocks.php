@@ -146,3 +146,27 @@ function acfgbc_HeaderStyleImageSection_rc( $block, $content = '', $is_preview =
     }
     include get_template_directory(). '/parts/blocks/HeaderStyleImageSection.php';
 }
+
+add_action( 'acf/init', 'acfgbc_JobBlock' );
+function acfgbc_JobBlock() {
+    if ( ! function_exists( 'acf_register_block' ) ) {
+        return;
+    }
+    acf_register_block( array(
+        'name'            => 'acfgbcJobBlock',
+        'title'           => __( 'Job Block' ),
+        'description'     => __( 'Job Block' ),
+        'render_callback' => 'acfgbc_JobBlock_rc',
+        'category'        => 'hfhcblocks',
+        'icon'            => 'tagcloud',
+        'mode'            => 'preview',
+        'supports'        => array( 'align' => false, 'multiple' => true, ),
+        'keywords'        => array( 'Row', 'Common' ),
+    ) );
+}
+function acfgbc_JobBlock_rc( $block, $content = '', $is_preview = false ) {
+    if ($is_preview) {
+        include_once get_template_directory().'/parts/blocks/editor/styles.php';
+    }
+    include get_template_directory(). '/parts/blocks/JobBlock.php';
+}

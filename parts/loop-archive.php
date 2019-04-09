@@ -9,8 +9,8 @@
     <article id="post-<?php the_ID(); ?>" <?php post_class('grid-container'); ?> role="article">
 
         <section class="entry-content grid-x pad-top-24 pad-bottom-24" itemprop="text">
-            <div class="cell large-4 medium-6 small-12 white-background" style="padding: 30px;"><a href="<?php the_permalink() ?>"
-                                                           class="body-colour img"><?php the_post_thumbnail('full'); ?></a>
+            <div class="cell large-4 medium-6 small-12 white-background" style="padding: 30px; "><a href="<?php the_permalink() ?>"
+                                                           class="body-colour img" style="background: url(<?php the_post_thumbnail_url('full');?>) no-repeat; background-size: cover;">&nbsp;</a>
             </div>
             <?php //the_content('<button class="tiny">' . __( 'Read more...', 'jointswp' ) . '</button>'); ?>
             <div class="cell auto white-background pad-top-30 pad-bottom-30">

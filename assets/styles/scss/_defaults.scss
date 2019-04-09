@@ -4,7 +4,7 @@
     padding-left: #{$i}px;
   }
 }
-@for $i from 1 through 600 {
+@for $i from 0 through 600 {
   .pad-right-#{$i} {
     padding-right: #{$i}px;
   }

@@ -28,7 +28,7 @@ if($double_top_margin) {
     <div class="grid-container white-background pad-top-30 pad-bottom-30 pad-left-0 pad-right-0">
         <div class="grid-x">
             <div class="cell large-4 medium-4 hide-for-small-only pad-left-30 jobimage">
-                <img src="<?php echo $imageURL; ?>" alt="<?php echo $imageALT; ?>" />
+                <a class="img" href="<?php echo $page_link; ?>"style="background: url(<?php echo $imageURL; ?>) no-repeat; background-size: cover;">&nbsp;</a>
             </div>
             <div class="cell large-8 medium-8 small-12 pad-left-30 pad-right-30">
                 <h2 class="mainheading semi-bold"><?php echo $heading; ?></h2>

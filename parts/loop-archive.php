@@ -8,12 +8,24 @@
 <div class="blog-background">
     <article id="post-<?php the_ID(); ?>" <?php post_class('grid-container'); ?> role="article">
 
-        <section class="entry-content grid-x pad-top-24 pad-bottom-24" itemprop="text">
-            <div class="cell large-4 medium-6 small-12 white-background" style="padding: 30px; "><a href="<?php the_permalink() ?>"
-                                                           class="body-colour img" style="background: url(<?php the_post_thumbnail_url('full');?>) no-repeat; background-size: cover;">&nbsp;</a>
-            </div>
+        <section class="entry-content grid-x" itemprop="text">
+            <?php
+            if(has_post_thumbnail()) {
+                ?>
+                <div class="cell large-4 medium-6 small-12 white-background featured-image"><a
+                            href="<?php the_permalink() ?>"
+                            class="body-colour img"
+                            style="background: url(<?php the_post_thumbnail_url('full'); ?>) no-repeat; background-size: cover;">&nbsp;</a>
+                </div>
+                <?php
+            } else {
+                ?>
+            <div class="cell shrink pad-left-30 white-background">&nbsp;</div>
+            <?php
+            }
+            ?>
             <?php //the_content('<button class="tiny">' . __( 'Read more...', 'jointswp' ) . '</button>'); ?>
-            <div class="cell auto white-background pad-top-30 pad-bottom-30">
+            <div class="cell auto white-background excerpt-details">
                 <div>
                     <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"
                            class="body-colour quoted"><?php the_title(); ?></a></h2>

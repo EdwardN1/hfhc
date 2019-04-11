@@ -1,16 +1,16 @@
 <div class="grid-x header-icons">
     <div class="cell auto"></div>
     <div class="large-shrink medium-4 small-4 cell pad-right-10">
-        <div class="text-center"><img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/Request-a-Call-Icon.png">
+        <div class="text-center"><a href="<?php the_field('request_a_call_back','option');?>"><img
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/Request-a-Call-Icon.png"></a>
         </div>
-        <div class="fontsize-xlarge-17 fontsize-medium-14 fontsize-small-14 text-center">Request a call</div>
+        <div class="fontsize-xlarge-17 fontsize-medium-14 fontsize-small-14 text-center"><a href="<?php the_field('request_a_call_back','option');?>" class="white">Request a call</a></div>
     </div>
     <div class="large-shrink medium-4 small-4 cell pad-right-10 pad-left-10">
-        <div class="text-center"><img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/Vacancies-Icon.png">
+        <div class="text-center"><a href="<?php the_field('vacancies','option');?>" class="white"><img
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/Vacancies-Icon.png"></a>
         </div>
-        <div class="fontsize-xlarge-17 fontsize-medium-14 fontsize-small-14 text-center">Vacancies</div>
+        <div class="fontsize-xlarge-17 fontsize-medium-14 fontsize-small-14 text-center"><a href="<?php the_field('vacancies','option');?>" class="white">Vacancies</a></div>
     </div>
     <div class="large-shrink medium-4 small-4 cell pad-left-10 pad-top-6">
         <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="white fontsize-17"><div class="text-center"><img

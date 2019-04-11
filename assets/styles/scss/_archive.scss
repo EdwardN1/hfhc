@@ -1,10 +1,18 @@
 .blog {
   .main {
     .blog-background:first-of-type {
-      padding-top: 24px;
+      padding-top: 12px;
     }
     .blog-background:last-of-type {
-      padding-bottom: 24px;
+      padding-bottom: 12px;
+    }
+    @include breakpoint(medium) {
+      .blog-background:first-of-type {
+        padding-top: 24px;
+      }
+      .blog-background:last-of-type {
+        padding-bottom: 24px;
+      }
     }
   }
 }
@@ -17,12 +25,12 @@
 .blog-background {
   .quoted {
     position: relative;
-    padding-left: 48px;
-    padding-right: 48px;
+    padding-left: 40px;
+    padding-right: 40px;
     &:before {
       content: " ";
-      width: 33px;
-      height: 27px;
+      width: 17px;
+      height: 14px;
       position: absolute;
       background-image: url("../images/left-blue-quote.png");
       background-size: contain;
@@ -31,13 +39,25 @@
     }
     &:after {
       content: " ";
-      width: 33px;
-      height: 27px;
+      width: 17px;
+      height: 14px;
       position: absolute;
       background-image: url("../images/right-blue-quote.png");
       background-size: contain;
       top: 0;
       right: 0;
+    }
+    @include  breakpoint(medium) {
+      padding-left: 48px;
+      padding-right: 48px;
+      &:before {
+        width: 33px;
+        height: 27px;
+      }
+      &:after {
+        width: 33px;
+        height: 27px;
+      }
     }
   }
   .img {
@@ -49,6 +69,33 @@
     img {
       height: 100%;
       width: auto;
+    }
+  }
+  .featured-image {
+    padding: 30px;
+    display: none;
+    @include breakpoint(medium) {
+      display: block;
+    }
+  }
+  .excerpt-details {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    @include breakpoint(medium) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-right: 15px;
+      padding-left: 0;
+    }
+  }
+  .entry-content {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    @include breakpoint(medium) {
+      padding-top: 24px;
+      padding-bottom: 24px;
     }
   }
 }

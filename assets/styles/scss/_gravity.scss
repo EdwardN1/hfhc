@@ -1,0 +1,26 @@
+.gform_wrapper {
+  @include xy-grid-container;
+  font-size: 16px;
+  line-height: 1.2;
+  @include breakpoint(medium) {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+  @include breakpoint(xlarge) {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+  .gf_progressbar_percentage {
+    font-size: 14px !important;
+  }
+
+}
+
+.ui-datepicker-title select {
+  max-width: 70px;
+  height: 1.5rem;
+  font-size: 14px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 2.5%;
+}

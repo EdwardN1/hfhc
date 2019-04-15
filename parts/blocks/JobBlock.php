@@ -1,6 +1,6 @@
 <?php $heading = get_field( 'heading' ); ?>
 <?php $sub_heading = get_field( 'sub_heading' ); ?>
-<?php $content = get_field( 'content' ); ?>
+<?php $content = wp_trim_words(get_field( 'content' ), $num_words = 50, $more = '...' ); ?>
 <?php $image = get_field( 'image' ); ?>
 <?php $imageURL = $image['url']; ?>
 <?php $imageALT = $image['alt']; ?>

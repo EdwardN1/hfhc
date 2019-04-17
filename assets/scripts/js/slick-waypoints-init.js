@@ -21,14 +21,14 @@ jQuery(document).ready(function ($) {
     $('[data-slick-slider]').slick();
 
     $('.slick-button').click(function (e) {
-        e.preventDefault();
+
         var slide = $(this).data('slide');
         var slider = $(this).data('slider-id');
-        /*var currentSlide = $('#'+slider).slick('slickCurrentSlide');
-        window.console.log('slide = ' + slide);
-        window.console.log('currentSlide = ' + currentSlide);*/
+        if(slide) {
+            e.preventDefault();
+            $('#' + slider).slick('slickGoTo', parseInt(slide));
+        }
 
-        $('#'+slider).slick('slickGoTo',parseInt(slide));
     });
 
 });

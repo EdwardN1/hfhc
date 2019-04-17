@@ -35,7 +35,7 @@
                             <div class="large-3 medium-6 small-12 fontsize-14 lineheight-13">
                                 <?php the_field('footer_column_3','option'); ?>
                             </div>
-                            <div class="large-3 medium-6 small-12 fontsize-14 lineheight-19">
+                            <div class="large-3 medium-6 small-12 fontsize-14 lineheight-19 pad-top-20">
                                 <p>
                                     SOCIAL MEDIA:<br>
                                     <a href="<?php the_field('facebook','option')?>" target="_blank" class="social-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebookicon-white.svg"></a>

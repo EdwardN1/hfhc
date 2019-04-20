@@ -43,7 +43,7 @@
                                     <a href="<?php the_field('twitter','option')?>" target="_blank" class="social-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/twittericon-white.svg"></a>
                                 </p>
                                 <div>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Request-a-Call-Icon.png"> REQUEST A CALL
+                                    <a href="<?php the_field('request_a_call_back','option');?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Request-a-Call-Icon.png"> REQUEST A CALL</a>
                                 </div>
                                 <div>
                                     <?php the_field('footer_column_4','option'); ?>

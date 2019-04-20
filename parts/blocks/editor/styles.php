@@ -23,5 +23,12 @@ echo '<link rel="stylesheet" type="text/css" href="'.get_template_directory_uri(
     .grid-container {
         max-width: 1260px;
     }*/
+    ul {
+        list-style: none;
+    }
+
+    ul.wp-submenu {
+        margin-left: 0;
+    }
 
 </style>
